@@ -8,44 +8,42 @@ The main objective is to assess whether the rating grades (from A1 to G5) effect
 
 (`default rates`)(Charged Off loans) across different grades.
 
-Author: Tran Duy Cuong
+Dataset: https://www.kaggle.com/datasets/nezukokamaado/auto-loan-dataset/data
 
-# FILES
+## EDA
 
-# PROEJECT WORKFLOWS 
+## Default loans / Default rate
 
-# I. ETL 
+**Insights:**
+- Abnormally high credit risk in the portfolio; Losses are concentrated in defaults, not prepayments.
+- Risks are typically concentrated in the low-income and moderate-DTI segments.
+- Concentration Risk in Debt Consolidation, Untapped Potential in Home Improvement.
 
-Data Cleaning
+**Strategies:**
+- Strengthen debt collection: Invest in early intervention, multi-channel recovery, and specialized teams to lower LGD below 50%.
+- Tighten underwriting standards: Focus on excluding or limiting low-income and moderate-DTI applicants to reduce overall PD.
+- Shift portfolio: Aggressively scale Home Improvement loans while capping exposure to Debt Consolidation to reduce concentration risk.
 
-Outlier Removal
+## Grade / Sub grade
 
-# II. EDA 
+**Insights:**
+- Higher income borrowers tend to borrow more (positive correlation between income and loan amount).
+- DTI is a stronger predictor of creditworthiness than income.
+- Effective risk-based underwriting.
+- Risk-based pricing works well in low-to-moderate risk (A-E3), pricing breaks down in high-risk tiers (E4-G).
 
-1. Default loans / Default rate
+**Strategies:**
+- Maintaining strict verification for subprime
+- Targeting higher-income borrowers selectively with low DTI.
+- Ensure clear rate differentiation across all grades, especially adding term-based adjustments in high-risk tiers.
 
-Default & Loss Analysis
+## Default Rate by Sub Grade
 
-Risk Concentration  
+**Insights:**
+- Linear interest rate increases perfectly offset rising risk, showing strong pricing discipline.
+- Volatile default rates in F-G reveal loss of scoring stability and accuracy at the high-risk tail.
+- High defaults paired with large loan sizes in lower grades create outsized loss potential.
 
-Loan Purpose
-
-2. Grade / Sub grade
-
-DTI and Income Contribution
-
-Verification Status Importance
-
-Interest Rate Distribution 
-
-3. Default Rate by Sub Grade
-
-Loan Amount, Interest Rate, Default Rate by Sub Grade
-
-# III. Recommendations
-
-Default Rate: Enhance debt recovery and lending processes, particularly for low-income segments, with tailored policies for different risk groups.
-
-Credit Grade: Tighten underwriting criteria and verification, while establishing a standardized interest rate framework for each grade.
-
-System Scale: Improve predictive quality by adding payment/transaction history or transitioning to a point-based scoring system.
+**Strategies:**
+- Restrict volume and loan sizes in F-G grades to control outsized loss potential.
+- Add new criteria to improve the scale: Payment history, Transaction history, ... or switch to a point-based format to enhance quality.
